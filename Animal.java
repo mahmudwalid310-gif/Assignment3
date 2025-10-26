@@ -1,26 +1,20 @@
-package assignment3;
 
+package ooplab.interfacedemo;
 
-public abstract class Animal {
-    abstract void sound();
-
+public interface Animal {
+    void bark();
 }
 
-class Lion extends Animal{
-    public void sound(){
-        System.out.println("Lion roars!");
+class Dog implements Animal {
+    @Override
+    public void bark() {
+        System.out.println("Dog is barking!");
     }
 }
-class Tiger extends Animal{
-    public void sound() {
-        System.out.println("Tiger growls!");
-    }
-}
-
-class Main {
+class M1 {
     public static void main(String[] args) {
-        Lion lion = new Lion();
-        lion.sound();
+        Dog dog = new Dog();
 
+        dog.bark();
     }
 }
